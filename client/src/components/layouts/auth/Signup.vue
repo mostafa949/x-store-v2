@@ -63,7 +63,7 @@ export default {
         const authData = {
           name: this.name,
           email: this.email,
-          password: 123123,
+          password: "123123",
         };
         this.$store
           .dispatch("signup", authData)
