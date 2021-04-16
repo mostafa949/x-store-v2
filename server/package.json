@@ -1,0 +1,37 @@
+{
+  "name": "x-store",
+  "version": "1.0.0",
+  "description": "An ecommerce website with multivendor",
+  "main": "index.js",
+  "scripts": {
+    "serve:local": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./*.js",
+    "lint:fix": "eslint --fix ./*.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "ecommerce website"
+  ],
+  "author": "Mostafa Mohamed",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "mongoose": "^5.12.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
+  },
+  "engines": {
+    "node": "14.16.0",
+    "npm": "6.14.11"
+  }
+}
