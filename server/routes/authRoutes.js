@@ -7,6 +7,7 @@ const {
   joiErrorFormatter,
   mongooseErrorFormatter,
 } = require('../utils/validationFormatter')
+const passport = require('passport')
 
 /**
  * Handles user registeration
@@ -26,5 +27,20 @@ router.post('/register', async (req, res) => {
     // console.error(mongooseErrorFormatter(error))
   }
 })
+
+/**
+ * Handles login
+ */
+router.post(
+  '/login',
+  passport.authenticate('local', {
+    successRedirect: '/login-success',
+    failureRedirect: '/login-failed',
+    // failureFlash: true,
+  }),
+  (req, res) => {
+    console.log(req.user)
+  }
+)
 
 module.exports = router
